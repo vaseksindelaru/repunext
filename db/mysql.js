@@ -7,4 +7,4 @@ import mysql from 'mysql2/promise';
       password : '21blackjack',
       database : 'sql1'}
 
-    // export const conn = await mysql.createConnection(config); 
+    export const conn = await mysql.createConnection(config); 
