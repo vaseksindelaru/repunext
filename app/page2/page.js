@@ -13,12 +13,13 @@ return {data}
     console.log(tarea)
 
     return(
-      <div className="text-white">   
-           <p>hola</p>
+      <div className="grid gap-4 grid-cols-5">   
+       
            {tarea.data[0].map((tarea)=>(
-  <div key={tarea.id}>
-    
-    <p>{tarea.tema}</p>
+  <div key={tarea.id} className="bg-white rounded-lg border-gray-800 mb-3 text-center ">
+    <p className='text-xl font-bold m-1'>{tarea.tema}</p>
+    <p className='text-lg text-slate-600'>{tarea.subtema}</p>
+    <p className='text-base text-slate-300'>{tarea.subtema}</p>
    
   </div>
  ))}

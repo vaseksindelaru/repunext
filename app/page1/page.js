@@ -22,7 +22,7 @@ const handleSubmit = async (e) =>{
   <p className="text-3xl text-center font-medium">Props</p>
 
   <div className="px-3 mb-3 mt-5">
-      <textarea name="tema" placeholder="*tema" onChange={handleChange} className="w-full bg-gray-100 rounded border border-gray-400 leading-normal resize-none h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"></textarea>
+      <textarea name="tema" placeholder="*tema" onChange={handleChange} className=" w-full bg-gray-100 rounded border border-gray-400 leading-normal resize-none h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"></textarea>
   </div>
   <div className="px-3 mb-2 mt-2">
       <textarea name="subtema" placeholder="*subtema" onChange={handleChange} className="w-full bg-gray-100 rounded border border-gray-400 leading-normal resize-none h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"></textarea>

@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className ={inter.className} >
         <div className = "text-yellow-600">
-        <Link href={'/'}>home</Link>
+        <Link href={'/page2'}>home</Link>
         </div>
         {children}
         </body>
