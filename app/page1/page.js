@@ -1,10 +1,10 @@
 'use client'
-import {useState} from "react"
+import {useState,useRef} from "react"
 import axios from "axios"
 
 function Page1 ()  {
   const [tarea,setTarea] = useState({tema:"",subtema:"",descripcion:""});
-  //const form = useRef(null);ref={form}
+const form = useRef(null)
 const handleChange = e => {
  //console.log(e.target.value, e.target.name)
   setTarea({ ...tarea,[e.target.name]:e.target.value})
@@ -13,12 +13,12 @@ const handleSubmit = async (e) =>{
   e.preventDefault();
   const res = await axios.post("/api/tareas", tarea)
   console.log(res)
-  //form.current.reset()
+  form.current.reset()
   
 }
   return (
   <div>    
-  <form onSubmit={handleSubmit}  className="max-w-2xl bg-orange-600 rounded-lg border p-3 mx-auto mt-10">
+  <form ref={form} onSubmit={handleSubmit}  className="max-w-2xl bg-orange-600 rounded-lg border p-3 mx-auto mt-10">
   <p className="text-3xl text-center font-medium">Props</p>
 
   <div className="px-3 mb-3 mt-5">
