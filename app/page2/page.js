@@ -5,16 +5,23 @@ import {conn} from "../../db/mysql"
   //const {data} = await axios.get("http://localhost:3000/api/tareas")
   //return {data} 
 const data = await conn.query("SELECT * FROM notas")
-console.log(data)
+return {data} 
 }
 
   async function TareasList(){
-loadTareas()
+    const tarea = await loadTareas()
+    console.log(tarea)
 
     return(
       <div className="text-white">   
            <p>hola</p>
+           {tarea.data[0].map((tarea)=>(
+  <div key={tarea.id}>
     
+    <p>{tarea.tema}</p>
+   
+  </div>
+ ))}
       </div>  )
   }
 export default TareasList
