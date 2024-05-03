@@ -13,13 +13,19 @@ export default function RootLayout({ children }) {
   
 
   return (
-    <html lang="en">
-      <body className ={inter.className} >
-        <div className = "text-yellow-600">
-        <Link href={'/page2'}>home</Link>
+  <html lang="en">
+      <body className ={inter.className}>
+      
+        <div className = "text-yellow-600  ">
+        <Link className="mx-5 hover:text-gray-300 hover:cursor-pointer"href={'/notasShow'}>notas</Link>
+        <Link className="mx-5 hover:text-gray-300 hover:cursor-pointer "href={'/tareasShow'}>tareas</Link>
+        <Link className="mx-5 hover:text-gray-300 hover:cursor-pointer"href={'/notasCreate'}>crear notas</Link>
+        <Link className="mx-5 hover:text-gray-300 hover:cursor-pointer"href={'/tareasCreate'}>crear tareas</Link>
         </div>
+
         {children}
-        </body>
+      
+      </body>
     </html>
   );
 }
