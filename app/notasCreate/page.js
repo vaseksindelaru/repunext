@@ -19,7 +19,7 @@ const handleSubmit = async (e) =>{
   return (
   <div>    
   <form ref={form} onSubmit={handleSubmit}  className="max-w-2xl bg-orange-600 rounded-lg border p-3 mx-auto mt-10">
-  <p className="text-3xl text-center font-medium">Props</p>
+  <p className="text-3xl text-center font-medium">crea la nota</p>
 
   <div className="px-3 mb-3 mt-5">
       <textarea name="tema" placeholder="*tema" onChange={handleChange} className=" w-full bg-gray-100 rounded border border-gray-400 leading-normal resize-none h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"></textarea>

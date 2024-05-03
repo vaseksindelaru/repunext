@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-
+//import {List} from '../components/list';     <List />
 
 function Index() {
     const router = useRouter();
@@ -43,7 +43,14 @@ function Index() {
             
             <div className="text-4xl text-yellow-600 font-semibold">
             <h1 className="font-bold" >tareas</h1>  
+          
             </div>
+
+            <div>
+            <h1 className=" font-bold text-yellow-600 " >lista aqui</h1>
+        
+            </div>
+            
             </div>
             
             
@@ -60,7 +67,9 @@ function Index() {
             onClick={handleRefresh}>Elegir</button>
             
             <div className="text-xl text-yellow-600 font-semibold">
-                {message}</div>  
+                {message}
+               
+                </div>  
             
            
             </div>

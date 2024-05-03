@@ -1,6 +1,6 @@
 //import axios from 'axios'
 import {conn} from "../../db/mysql"
-
+import List from "../components/list"
   async function loadTareas() {
   //const {data} = await axios.get("http://localhost:3000/api/tareas")
   //return {data} 
@@ -12,19 +12,16 @@ return {data}
     const tarea = await loadTareas()
     console.log(tarea)
 
-    return(<div><h1 className='text-center font-mono text-3xl text-yelow text-yellow-600 font-bold  mb-8'>mis notas</h1>
+    return(
+    <div>
+      <h1 className='text-center font-mono text-3xl 
+      text-yelow text-yellow-600 font-bold  mb-8'>
+        mis notas</h1>
       <div className="mx-12 grid gap-4 grid-cols-5">   
        
            {tarea.data[0].map((tarea)=>(
-  <div key={tarea.id} className="bg-orange-500 hover:bg-gray-500 hover:cursor-pointer p-4 rounded-lg border-gray-800 mb-2 text-center">
-    <div className=" p-4 ">
-    <p className='text-xl font-bold m-1 font-mono'>{tarea.tema}</p>
-    <p className='text-base text-slate-600 m-1'>{tarea.subtema}</p>
-    <p className='text-sm text-slate-300 m-1'>{tarea.descripcion}</p>
-   </div>
-  </div>
- ))}
-      </div></div>  )
+           <List tarea={tarea} key={tarea.tarea_id}/>))}</div>
+   </div> )
   }
 export default TareasList
 
